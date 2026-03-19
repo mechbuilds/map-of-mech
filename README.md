@@ -1,73 +1,155 @@
-# React + TypeScript + Vite
+# The Map of Mech 🗺️
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A cinematic, interactive personal blog and portfolio built with React, TypeScript, and Vite.
 
-Currently, two official plugins are available:
+![React](https://img.shields.io/badge/React-18-blue) ![TypeScript](https://img.shields.io/badge/TypeScript-5.8-blue) ![Vite](https://img.shields.io/badge/Vite-8.0-purple) ![Tailwind CSS](https://img.shields.io/badge/TailwindCSS-3.4-teal) ![Framer Motion](https://img.shields.io/badge/Framer_Motion-12.36-pink)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## 🚀 Live Demo
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+[Live Demo](#)
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 📌 About The Project
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+The Map of Mech is a full stack personal blog and interactive portfolio built entirely from scratch. A personal life story is presented as an **interactive node-based world map** — each clickable node reveals a chapter of the journey.
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+The site showcases four core experiences:
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+- **Interactive Map** — A cinematic SVG world map with animated story nodes and a plane that travels between them
+- **Blog** — 17 original posts across 6 content pillars with individual article pages
+- **Positions Log** — An archive of real public comments and positions
+- **About & Contact** — Biography with photo gallery and a functional contact form
+
+---
+
+## ✨ Features
+
+- Cinematic intro sequence with multi-phase animation timeline
+- Interactive SVG world map with 7 clickable story nodes
+- Animated plane following user progression via quadratic Bézier curves
+- Slide-in story panels with typewriter headline effect
+- Full blog system — 17 posts across 6 content pillars
+- Disclaimer modal with session-aware one-time display
+- Positions log archiving real public comments
+- About page with three-photo gallery and animated biography
+- Functional contact form wired to Formspree
+- Custom cursor with spring physics ring
+- Animated starfield canvas background
+- Film grain and scanline atmosphere overlays
+- Progress tracking bar that updates as chapters are read
+- Responsive navigation pill with active state indicator
+
+---
+
+## 🛠️ Tech Stack
+
+| Technology | Purpose |
+|---|---|
+| React 18 + Vite | Frontend framework & build tool |
+| TypeScript | Type safety |
+| Tailwind CSS v3 | Utility-first styling |
+| Framer Motion | Animations & spring physics effects |
+| React Router DOM v6 | Client-side routing |
+| React Hook Form | Form handling & validation |
+| Lucide React | Icons |
+| Shadcn UI | UI components |
+| Formspree | Contact form delivery |
+| npm | Package manager |
+
+---
+
+## 🚀 Getting Started
+
+**Prerequisites**
+
+- [Node.js](https://nodejs.org/) installed on your machine
+- Node.js 18+
+
+**Installation**
+
+```bash
+# Clone the repository
+git clone https://github.com/your-username/map-of-mech.git
+
+# Navigate to the project
+cd map-of-mech
+
+# Install dependencies
+npm install
+
+# Start the development server
+npm run dev
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+The site will be available at `http://localhost:5173`
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+**Build for Production**
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+npm run build
 ```
+
+This creates a `dist/` folder ready for deployment.
+
+---
+
+## 📁 Project Structure
+
+```
+map-of-mech/
+├── public/
+├── src/
+│   ├── components/        # 9 global UI components
+│   │   ├── ui/            # Shadcn UI components
+│   │   ├── CustomCursor.tsx
+│   │   ├── DisclaimerModal.tsx
+│   │   ├── FilmGrain.tsx
+│   │   ├── IntroSequence.tsx
+│   │   ├── NavPill.tsx
+│   │   ├── Starfield.tsx
+│   │   ├── StoryPanel.tsx
+│   │   └── WorldMapSVG.tsx
+│   ├── data/
+│   │   ├── chapters.ts    # 7 story node definitions
+│   │   └── blog.ts        # 17 blog post objects
+│   ├── pages/
+│   │   ├── Index.tsx
+│   │   ├── BlogPage.tsx
+│   │   ├── BlogPostPage.tsx
+│   │   ├── PositionsPage.tsx
+│   │   ├── AboutPage.tsx
+│   │   └── ContactPage.tsx
+│   └── App.tsx
+├── tailwind.config.ts
+├── vite.config.ts
+└── package.json
+```
+
+---
+
+## 👥 Team
+
+| Name | Role |
+|---|---|
+| Mech | Founder & Sole Developer — US-based |
+
+---
+
+## 📬 Contact
+
+- 📧 Email: mechnickell@gmail.com
+- 📍 Location: United States (Remote)
+- ⏱ Response Within 24 hours
+
+---
+
+## 📄 License
+
+© 2026 Mech. All rights reserved.
+
+---
+
+*Made in the US — Built Globally*
