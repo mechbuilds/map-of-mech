@@ -8,7 +8,7 @@ A cinematic, interactive personal blog and portfolio built with React, TypeScrip
 
 ## 🚀 Live Demo
 
-[Live Demo](#)
+[Live Demo](https://map-of-mech.netlify.app/)
 
 ---
 
