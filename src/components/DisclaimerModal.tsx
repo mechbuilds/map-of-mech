@@ -47,11 +47,13 @@ const DisclaimerModal = () => {
               left: "50%",
               transform: "translate(-50%, -50%)",
               zIndex: 301,
-              width: "clamp(300px, 90vw, 520px)",
+              width: "90vw",
+              maxWidth: "520px",
               background: "#0c0c10",
               border: "1px solid rgba(248,113,113,0.3)",
               borderTop: "2px solid #f87171",
-              padding: "48px 44px 40px",
+              padding: "36px 24px 32px",
+              boxSizing: "border-box",
             }}
           >
             {/* Top bar accent */}
@@ -62,8 +64,7 @@ const DisclaimerModal = () => {
                 left: 0,
                 right: 0,
                 height: 2,
-                background:
-                  "linear-gradient(90deg, #f87171, transparent)",
+                background: "linear-gradient(90deg, #f87171, transparent)",
               }}
             />
 
@@ -83,7 +84,7 @@ const DisclaimerModal = () => {
             <h2
               className="font-display"
               style={{
-                fontSize: "clamp(28px, 4vw, 48px)",
+                fontSize: "clamp(24px, 5vw, 48px)",
                 color: "white",
                 lineHeight: 1.0,
                 letterSpacing: "0.03em",
@@ -114,7 +115,7 @@ const DisclaimerModal = () => {
                 fontSize: "15px",
                 color: "rgba(255,255,255,0.65)",
                 lineHeight: 1.8,
-                marginBottom: 32,
+                marginBottom: 24,
               }}
             >
               This blog contains uncomfortable truths, unfiltered
@@ -128,7 +129,7 @@ const DisclaimerModal = () => {
                 fontSize: "15px",
                 color: "rgba(255,255,255,0.65)",
                 lineHeight: 1.8,
-                marginBottom: 36,
+                marginBottom: 32,
               }}
             >
               It's also not my problem.
@@ -148,7 +149,7 @@ const DisclaimerModal = () => {
                 fontSize: "18px",
                 letterSpacing: "0.22em",
                 marginBottom: 14,
-                cursor: "none",
+                cursor: "pointer",
               }}
             >
               I CAN HANDLE IT →
@@ -159,7 +160,7 @@ const DisclaimerModal = () => {
               className="font-mono-label tracking-[0.2em]"
               style={{
                 fontSize: "12px",
-                color: "rgba(255,255,255,0.18)",
+                color: "rgba(255,255,255,0.35)",
                 textAlign: "center",
               }}
             >
